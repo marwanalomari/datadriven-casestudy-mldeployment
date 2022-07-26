@@ -10,6 +10,6 @@ The first part: the program will first import the data (not included because it 
 The second part: Deploying the model using flask api in Docker
 - For performing the second part of the program:
   Perform:
-  make api, a command on your terminal
+  - make api, a command on your terminal
 
 Warning: the program uses private dataset, so it is avaliable upon request, please contact: research@posos.fr
