@@ -16,13 +16,12 @@ def my_form_post():
     vectorizer=pickle.load(open("vectorizer.pickle", 'rb'))
     text = request.form['text']
     result = pickled_model.predict_proba(vectorizer.transform([text]))[0][1]
-    data=[]
     if result > 0.5:
         label="True"
     else:
         label="False"
-    data.append({'query':text,'is_posology':label})
-    return(render_template('form.html', variable=(data)))
+    data = [{'query':text,'is_posology':label}]
+    return(render_template('form.html', variable=(json.dumps(data))))
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=4002)
