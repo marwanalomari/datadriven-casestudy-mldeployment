@@ -1,4 +1,4 @@
-# rd-technical-test
+# Data driven ml deployment, managed by docker
 This repo builds on concepts of any data driven machine learning project, which include training, serving and exposing a model learning model in Docker. The repo consists of two parts.
 
 The first part: the program will first import the data (not included because it is private), doing some clean up and data preparation. Then, the text data will be represented numerically and split into training and testing sets. The results of logistic regression model will be assessed on F1 score and precision and recall. At the end, the model is saved (pickled) for later use in micro service.
